@@ -6,7 +6,9 @@ variabeln som refereras.
 
  */
 
-
+fn dubblera(tal: &mut isize) {
+    *tal *= 2;
+}
 
 fn main() {
     let mut n: isize = 7;

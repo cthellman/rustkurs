@@ -7,6 +7,11 @@ icke-blanka tecken räknas som ett ord.)
 
  */
 
+fn long_words(s: &str) -> usize {
+    s.split_whitespace()
+	.filter(|&ord| ord.chars().count() > 4)
+	.count()
+}
 
 
 fn main() {

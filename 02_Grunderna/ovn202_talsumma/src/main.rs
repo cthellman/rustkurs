@@ -14,6 +14,17 @@ eller via menyerna i editorn.
 
  */
 
+fn talsumma(slut: usize) -> usize {
+    let mut sum = 0;
+    for i in 1..=slut {
+	sum += i;
+    }
+    sum
+}
+
+fn _talsumma(slut: usize) -> usize {
+    (0..=slut).sum()
+}
 
 
 fn main() {

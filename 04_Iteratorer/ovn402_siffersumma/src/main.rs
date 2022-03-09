@@ -16,6 +16,21 @@ T.ex. ska [1234, 56, 28, 82] sorteras som
 
 */
 
+fn siffersumma(mut n: u32) -> u32 {
+    let mut res = 0;
+    while n > 0 {
+	res += n % 10;
+	n /= 10;
+    }
+    res
+}
+
+fn sss(lista: &mut [u32]) {
+    lista.sort_by(|a, b| {
+	siffersumma(*a).cmp(&siffersumma(*b))
+	    .then(a.cmp(b))			   
+    });    
+}
 
 fn main() {
     let mut lista = [1234, 56, 28, 82];

@@ -16,6 +16,18 @@ Räkna inte med radbrytningar.
 
 use std::io::{BufReader, BufRead};
 
+fn wc(fil: &str) -> std::io::Result<(usize, usize, usize)> {
+    let fh = std::fs::File::open(fil)?;
+    let reader = BufReader::new(fh);
+    let mut c = (0, 0, 0);
+    for rad in reader.lines() {
+	let rad = rad?;
+	c.0 += 1;
+	c.1 += rad.split_whitespace().count();
+	c.2 += rad.chars().count();
+    }
+    Ok(c)
+}
 
 fn main() {
     println!("scores.txt: {:?}", wc("scores.txt"));

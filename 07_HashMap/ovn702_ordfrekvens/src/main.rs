@@ -18,6 +18,32 @@ Vid fel, eller om inga ord finns, returnera None.
 
 */
 
+use std::io::BufRead;
+use std::collections::HashMap;
+
+fn frekvens(fil: &str) -> Option<(String, usize)> {
+    let fh = match std::fs::File::open(fil) {
+	Ok(fh) => fh,
+	Err(_) => return None,
+    };
+    let mut frek = HashMap::<String, usize>::new();
+    for rad in std::io::BufReader::new(fh).lines() {
+	if let Ok(rad) = rad {
+	    for ord in rad.split_whitespace() {
+		let ord = ord.to_lowercase();
+		let p = frek.entry(ord).or_insert(0);
+		*p += 1;
+	    }
+	} else {
+	    return None;
+	}
+    }
+
+    match frek.iter().max_by_key(|t| *t.1) {
+	Some((namn, &p)) => Some((namn.clone(), p)),
+	None => None,
+    }
+}
 
 
 fn main() {

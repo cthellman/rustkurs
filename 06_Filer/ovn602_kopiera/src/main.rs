@@ -10,5 +10,9 @@ ska skrivas till den andra filen.
 
  */
 
+use std::io::{BufRead, BufReader, Write};
 
 
+fn main() {
+    kopiera("scores.txt", "kopia.txt").unwrap();
+}

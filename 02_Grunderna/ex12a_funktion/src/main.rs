@@ -1,7 +1,7 @@
 /*  ex12a_funktion  */
 fn addera(a: isize, b: isize) -> isize {
-    let c = a + b;
-    c
+    let c = a + b;  // -> <datatype of the return value>
+    c               // return value, without semicolon
 }
 
 fn main() {

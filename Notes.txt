@@ -1,0 +1,47 @@
+--------------------------------------------------
+Generellt 
+--------------------------------------------------
+Alla tecken behandlas som utf-8 / unicode => kan använda åäö
+Ett värde är ett stycke data (i andra språk kallas det för objekt)
+Stödjer inte arv - istället kalls det för trait (~ egenskap)
+Inga exceptions - fel måste propageras
+--------------------------------------------------
+Värden 
+--------------------------------------------------
+Varje värde har exakt en ägare
+Ett värde kan äga andra värden
+När ägaren försvinner tas dess värden bort - drop
+Ägarskap kan överföras - move
+--------------------------------------------------
+Kopiering
+--------------------------------------------------
+Enkla datatyper tillåter kopiering - the "Copy" trait
+let x=1.5;
+let y=x;    
+--------------------------------------------------
+Move
+--------------------------------------------------
+Tilldelning överför ägarskap - för typer som inte är
+Copy
+Även vid funktionsparametrar
+och returvärden
+--------------------------------------------------
+Referenser
+--------------------------------------------------
+Värden kan lånas ut via referenser
+Referensen kan bara användas under värdets livstid
+- inga null pointer exceptions
+- kontrolleras vid kompileringen
+Mutable referenser är exklusiva
+--------------------------------------------------
+Datatyper
+--------------------------------------------------
+isize, usize
+i8, i16, i32, u8, u16, u32
+--------------------------------------------------
+Switch
+--------------------------------------------------
+Kallas för match i rust
+--------------------------------------------------
+
+--------------------------------------------------

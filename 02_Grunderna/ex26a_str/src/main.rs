@@ -1,7 +1,7 @@
 /*  ex26a_str  */
 fn main() {
     let s1 = "Hej\thopp";
-    let s2 = r"Tecknen \n ger radbrytning";
+    let s2 = r"Tecknen \n ger radbrytning"; //r ger explicit den sträng man skriver
     println!("{}", s1);
     println!("{}", s2);
     println!("{:?}", b"G\xf6ran");

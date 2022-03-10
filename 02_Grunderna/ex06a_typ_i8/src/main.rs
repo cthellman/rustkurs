@@ -3,6 +3,6 @@ fn main() {
     let a: i8 = 5;
     let b = 3;
     let c = a + b - 10;
-    println!("Resultat: {}", c);
+    println!("Resultat: {c}");
 }
 // Resultat: -2

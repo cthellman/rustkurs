@@ -2,8 +2,8 @@
 fn main() {
     let mut a: usize = 0;
     let mut b = 1;
-    while a < 500 {
-	print!("{} ", a);
+    while a < 50000000 {
+	println!("{} ", a);
 	let c = a + b;
 	a = b;
 	b = c;

@@ -8,6 +8,7 @@ enum Färg {
 
 fn main() {
     let s = Färg::Hjärter;
+
     match s {
 	Färg::Hjärter | Färg::Ruter => {
 	    println!("Rött")
@@ -16,3 +17,5 @@ fn main() {
     }
 }
 // Rött
+
+use std::intrinsics::size_of;

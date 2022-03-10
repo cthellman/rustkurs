@@ -43,5 +43,6 @@ Switch
 --------------------------------------------------
 Kallas för match i rust
 --------------------------------------------------
-
+Typparametrar
 --------------------------------------------------
+fn addera<T> - Skapar en metod som tar typen på argumentet 

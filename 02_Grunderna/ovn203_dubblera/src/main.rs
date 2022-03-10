@@ -6,13 +6,17 @@ variabeln som refereras.
 
  */
 
-
-
 fn main() {
     let mut n: isize = 7;
     dubblera(&mut n);
     println!("Värde: {}", n);
 }
+
+fn dubblera(tal: &mut isize) -> isize{
+    *tal *= 2;
+    *tal
+}
+
 
 // Lämna koden nedan oförändrad
 

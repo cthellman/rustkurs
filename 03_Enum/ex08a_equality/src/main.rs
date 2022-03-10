@@ -1,5 +1,5 @@
 /*  ex08a_equality  */
-#[derive(PartialEq)]
+#[derive(PartialEq)]    // enum has a trait called partial equality
 enum Färg {
     Klöver,
     Ruter,

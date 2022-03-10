@@ -8,7 +8,16 @@ T.ex. ska fibomax(100) returnera 89.
 
 */
 
-
+fn fibomax(tal: u32) {
+    let mut a: u32 = 0;
+    let mut b = 1;
+    while a =< tal {
+	println!("{} ", a);
+	let c = a + b;
+	a = b;
+	b = c;
+    }
+}
 
 fn main() {
     println!("Resultat: {}", fibomax(100));

@@ -18,6 +18,6 @@ fn talsumma(n: usize) -> usize {
 }
 
 fn main() {
-    let sluttal: usize = 100_000_000;
+    let sluttal: usize = 1000_000_000;
     println!("Summa: {}", talsumma(sluttal));
 }

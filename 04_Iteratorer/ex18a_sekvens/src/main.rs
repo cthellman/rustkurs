@@ -1,5 +1,5 @@
 /*  ex18a_sekvens  */
-fn visa(lista: &[usize]) {
+fn visa(lista: &[usize]) {  // the argument here is a fat pointer
     println!("Sekvens: {:?}", lista);
 }
 

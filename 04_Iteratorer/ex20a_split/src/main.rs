@@ -1,7 +1,7 @@
 /*  ex20a_split  */
 fn main() {
-    let s = "Ett två tre fyra.";
-    for ord in s.split_whitespace() {
+    let s = "Ett två tre fyra fem";
+    for ord in s.split_terminator(" ") {
 	println!("Ord: {}", ord);
     }
 }

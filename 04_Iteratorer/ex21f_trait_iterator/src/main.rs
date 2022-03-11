@@ -4,7 +4,7 @@
 
 trait Iterator {
     type Item;
-    fn next(&mut self) -> Option<Self::Item>;
+    fn next(&mut self) -> Option<Self::Item>;   // Option is either Some(<value>) or None
 
     fn count(self) -> usize { ... }
     // ...

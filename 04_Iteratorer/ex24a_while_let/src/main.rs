@@ -3,6 +3,11 @@ fn main() {
     let s = "Bill 12\nSteve 19\n\
 	     Linus 33\nKen 27\n";
     let mut it = s.split_whitespace();
+    
+    // while let tup = it.take(2){
+    //     print!("{} fick {}.",tup.0,tup.1);
+    // }
+
     while let Some(namn) = it.next() {
 	if let Some(p) = it.next() {
 	    print!("{} fick {}. ", namn, p);

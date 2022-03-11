@@ -5,8 +5,8 @@ fn main() {
 	"Linus".to_string(), "Ken".to_string(),
     ];
     lista.sort_by(|a, b|
-	b.len().cmp(&b.len()).then(a.cmp(b))
+	a.len().cmp(&b.len()).then(a.cmp(b))
     );
     println!("Resultat: {:?}", lista);
 }
-// Resultat: ["Bill", "Ken", "Linus", "Steve"]
+// Resultat: ["Ken", "Bill", "Linus", "Steve"]

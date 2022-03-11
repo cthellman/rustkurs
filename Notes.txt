@@ -46,3 +46,14 @@ Kallas för match i rust
 Typparametrar
 --------------------------------------------------
 fn addera<T> - Skapar en metod som tar typen på argumentet 
+--------------------------------------------------
+Vektorer och arrayer
+--------------------------------------------------
+En vektor (vec!) är dynamisk eller kan bli större 
+Collect - kan skapa arrayer o vektorer ifrån t.ex. 
+en range
+--------------------------------------------------
+Closures
+--------------------------------------------------
+När det är små enkla funktioner så kan man använda
+closures istället

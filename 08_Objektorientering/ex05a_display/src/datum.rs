@@ -10,12 +10,15 @@ impl std::fmt::Display for Datum {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>)
 	   -> std::fmt::Result {
 	write!(f, "{} {} {}", self.day,
-	       Datum::MÅNAD[self.month as usize], self.year)
+	       Datum::MÅNAD[self.month as usize], self.year)	// rust will not auto convert 
+		   													// self.month to usize
     }
 }
 
 impl Datum {
-    const MÅNAD: [&'static str; 13] = [ "",
+    const MÅNAD: [&'static str; 13] = [ "",				// 'static - reference lifetime, 														// in this case forever. Ensures that
+														// the data the reference points to 
+														// exists 
 	"jan", "feb", "mar", "apr", "maj", "jun",
 	"jul", "aug", "sep", "okt", "nov", "dec"
     ];
